@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Task Scheduler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="todo-container">
+    <h2>Online Task Scheduler</h2>
+    
+    <!-- Task Entry -->
+    <div class="top-bar">
+        <input type="text" id="taskInput" placeholder="Add a task">
+        <select id="priority">
+            <option value="low">🟢 Low</option>
+            <option value="medium">🟡 Medium</option>
+            <option value="high">🔴 High</option>
+        </select>
+        <input type="date" id="dueDate">
+        <input type="time" id="dueTime">
+        <button onclick="addTask()">Add</button>
+    </div>
+
+    <!-- Search -->
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search tasks..." oninput="renderTasks()">
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+        <button onclick="setFilter('all')" class="active">All</button>
+        <button onclick="setFilter('active')">Active</button>
+        <button onclick="setFilter('completed')">Completed</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+    <!-- Clear Completed -->
+    <button class="clear-btn" onclick="clearCompleted()">🧹 Clear Completed</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

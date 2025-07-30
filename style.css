@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+
+    /* Background image + gradient overlay */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Container styling */
+.todo-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    width: 420px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Top bar */
+.top-bar {
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+input[type="text"], input[type="date"], input[type="time"], select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"] { flex: 2; }
+select { flex: 1; }
+input[type="date"], input[type="time"] { flex: 1; }
+
+button {
+    padding: 8px 12px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover { background: #0056b3; }
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.filters button {
+    flex: 1;
+    margin: 0 2px;
+    background: #e0e0e0;
+    color: black;
+}
+
+.filters button.active {
+    background: #007BFF;
+    color: white;
+}
+
+/* Task list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    background: rgba(250, 250, 250, 0.9);
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+li.completed span.task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priority-high { color: red; font-weight: bold; }
+.priority-medium { color: orange; font-weight: bold; }
+.priority-low { color: green; font-weight: bold; }
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.search-bar {
+    margin-top: 10px;
+    display: flex;
+}
+
+.clear-btn {
+    margin-top: 10px;
+    width: 100%;
+    background: crimson;
+}
