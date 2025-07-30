@@ -18,7 +18,7 @@ It allows you to add, edit, prioritize, and manage your tasks directly in your b
 ---
 
 ## 📷 Preview
-![Preview](https://viveksonone-retro.github.io/Online-Task-Scheduler/)
+![Preview]( https://viveksonone-retro.github.io/Online-Task-Scheduler/)
 
 ---
 
